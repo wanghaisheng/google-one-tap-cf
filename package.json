@@ -25,5 +25,8 @@
 	"bugs": {
 		"url": "https://github.com/wanghaisheng/google-one-tap-cf/issues"
 	},
-	"homepage": "https://github.com/wanghaisheng/google-one-tap-cf#readme"
+	"homepage": "https://github.com/wanghaisheng/google-one-tap-cf#readme",
+	"devDependencies": {
+		"@cloudflare/next-on-pages": "^1.13.2"
+	}
 }

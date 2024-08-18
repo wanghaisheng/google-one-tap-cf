@@ -1,4 +1,4 @@
-// pages/index.js
+// pages/index.tsx
 
 import Head from "next/head";
 import Image from "next/image";
@@ -6,9 +6,20 @@ import styles from "../styles/Home.module.css";
 import { useEffect } from "react";
 import { googleOneTap } from "google-one-tap-cf"; // Import the ES module
 
+// Define the types for the options
+interface GoogleOneTapOptions {
+  client_id: string;
+  auto_select?: boolean;
+  cancel_on_tap_outside?: boolean;
+  context?: "signin" | "signup" | "use";
+}
+
+export const runtime = "edge";
+
 export default function Home() {
-  const options = {
-    client_id: process.env.NEXT_PUBLIC_CLIENT_ID, // required
+  // Define options for Google One Tap
+  const options: GoogleOneTapOptions = {
+    client_id: process.env.NEXT_PUBLIC_CLIENT_ID || "", // required
     auto_select: false, // optional
     cancel_on_tap_outside: false, // optional
     context: "signin", // optional
@@ -39,7 +50,7 @@ export default function Home() {
 
         <p className={styles.description}>
           Get started by editing{" "}
-          <code className={styles.code}>pages/index.js</code>
+          <code className={styles.code}>pages/index.tsx</code>
         </p>
 
         <div className={styles.grid}>
