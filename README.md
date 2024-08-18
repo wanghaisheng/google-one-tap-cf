@@ -1,4 +1,6 @@
-# Google One Tap Login
+# Google One Tap Login for cloudlfare 
+
+use fetch api instead
 
 ## Demo (Nextjs): [https://google-one-tap-taupe.vercel.app](https://google-one-tap-taupe.vercel.app/)
 
@@ -11,7 +13,7 @@ Sign up users with a single tap and keep them signed in automatically.
 ## Install
 
 ```
-npm install google-one-tap --save
+npm install google-one-tap-cf --save
 ```
 
 ## How to use
@@ -19,7 +21,7 @@ npm install google-one-tap --save
 ### **React**
 
 ```js
-import googleOneTap from 'google-one-tap';
+import googleOneTap from 'google-one-tap-cf';
 
 const options = {
 	client_id: '___CLIENT_ID___', // required
@@ -37,7 +39,7 @@ googleOneTap(options, (response) => {
 ### **Vue**
 
 ```js
-import googleOneTap from 'google-one-tap';
+import googleOneTap from 'google-one-tap-cf';
 export default {
 	mounted() {
 		const options = {

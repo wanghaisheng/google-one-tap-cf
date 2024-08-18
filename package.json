@@ -1,26 +1,29 @@
 {
-	"name": "google-one-tap",
+	"name": "google-one-tap-cf",
 	"version": "1.0.6",
-	"description": "Google One Tap Login",
+	"description": "Google One Tap Login for cloudflare",
 	"main": "index.js",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/BurakGur/google-one-tap.git"
+		"url": "git+https://github.com/wanghaisheng/google-one-tap-cf.git"
 	},
 	"keywords": [
 		"google one tap",
 		"google sign in",
 		"google sign up",
 		"react",
-		"vue"
+		"vue",
+		"cloudflare worker",
+		"cloudflare",
+		"cloudflare pages"
 	],
-	"author": "Burak Gür <gurbrk@gmail.com>",
+	"author": "wanghaisheng <admin@tiktokastudio.com>",
 	"license": "ISC",
 	"bugs": {
-		"url": "https://github.com/BurakGur/google-one-tap/issues"
+		"url": "https://github.com/wanghaisheng/google-one-tap-cf/issues"
 	},
-	"homepage": "https://github.com/BurakGur/google-one-tap#readme"
+	"homepage": "https://github.com/wanghaisheng/google-one-tap-cf#readme"
 }

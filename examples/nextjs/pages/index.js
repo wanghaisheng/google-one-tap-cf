@@ -1,8 +1,10 @@
+// pages/index.js
+
 import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
-import googleOneTap from "google-one-tap";
 import { useEffect } from "react";
+import { googleOneTap } from "google-one-tap-cf"; // Import the ES module
 
 export default function Home() {
   const options = {
@@ -13,10 +15,13 @@ export default function Home() {
   };
 
   useEffect(() => {
-    googleOneTap(options, (response) => {
-      // Send response to server
-      console.log(response);
-    });
+    // Ensure window and document are available
+    if (typeof window !== "undefined" && window.document) {
+      googleOneTap(options, (response) => {
+        console.log(response); // Handle the response
+        // Optionally, send the response to your server
+      });
+    }
   }, []);
 
   return (
